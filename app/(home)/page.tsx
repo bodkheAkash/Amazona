@@ -17,7 +17,7 @@ const Page = async () => {
     {
       title: "Categories to explore",
       link: {
-        text: "see More",
+        text: "See More",
         href: "/search",
       },
       items: categories.map((category) => ({
