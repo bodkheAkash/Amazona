@@ -1,6 +1,4 @@
 "use server"
-
-import { json } from "stream/consumers"
 import { connectToDatabase } from "../db"
 import Product from "../db/models/product.model"
 
@@ -33,7 +31,7 @@ export async function getProductsForCard({
   )
     .sort({ createdAt: "desc" })
     .limit(limit)
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+
   return JSON.parse(JSON.stringify(products)) as {
     name: string
     href: string
